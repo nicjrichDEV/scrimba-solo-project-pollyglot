@@ -7,7 +7,40 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <div class="main-container"></div>
-    <script type="module" src="frontend.ts"></script>
+    <main class="main-container">
+      <header>
+        <img
+          src="./assets/parrot.png"
+          alt="PollyGlot logo of a multi color parrot"
+        />
+        <div>
+          <h1>PollyGlot</h1>
+          <p>Perfect Translation Every Time</p>
+        </div>
+      </header>
+      <section>
+        <h2>Text to translate 👇</h2>
+        <textarea name="user-input" id="user-input"></textarea>
+        <div class="lang-selection-container">
+          <h2>Select language 👇</h2>
+          <form id="lang-select">
+            <input
+              type="radio"
+              name="lang"
+              id="french"
+              value="french"
+              required
+            />
+            <label for="french">🇫🇷 French</label>
+            <input type="radio" name="lang" id="spanish" value="spanish" />
+            <label for="spanish">🇪🇸 Spanish</label>
+            <input type="radio" name="lang" id="japanese" value="japanese" />
+            <label for="japanese">🇯🇵 Japanese</label>
+            <button>Translate</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="frontend.js"></script>
   </body>
 </html>

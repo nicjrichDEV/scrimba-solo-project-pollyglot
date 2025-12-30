@@ -1,7 +1,7 @@
 import index from "./index.html";
 
 Bun.serve({
-  routes: { "/": index },
+  routes: { "/": index, "/api/translate": {} },
   development: {
     hmr: true,
     console: true,
