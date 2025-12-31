@@ -113,17 +113,49 @@ section {
   label {
     grid-column: 3;
   }
+}
 
-  button {
-    margin-top: 12px;
-    grid-column: 1 / -1;
-    height: 48px;
-    border: unset;
-    border-radius: 12px;
-    background-color: steelblue;
-    color: white;
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: 0.5px;
+.results-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.btn {
+  margin-top: 12px;
+  grid-column: 1 / -1;
+  height: 48px;
+  border: unset;
+  border-radius: 12px;
+  background-color: steelblue;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.loading-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #e0e0e0;
+  border-top-color: steelblue;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
+}
+
+.hidden {
+  display: none;
 }

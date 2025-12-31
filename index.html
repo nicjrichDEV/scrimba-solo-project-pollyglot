@@ -36,8 +36,15 @@
             <label for="spanish">🇪🇸 Spanish</label>
             <input type="radio" name="lang" id="japanese" value="japanese" />
             <label for="japanese">🇯🇵 Japanese</label>
-            <button>Translate</button>
+            <button class="btn">Translate</button>
           </form>
+        </div>
+        <div class="loading-indicator hidden">
+          <div class="spinner"></div>
+        </div>
+        <div class="results-container hidden">
+          <p class="translation-result"></p>
+          <button class="btn new-translation">New Translation</button>
         </div>
       </section>
     </main>

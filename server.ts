@@ -16,7 +16,7 @@ Bun.serve({
         const { text, language } = (await req.json()) as TranslateRequest;
         console.log(`Translating: ${text} to ${language}`);
 
-        const translation = await getTranslation(text, language);
+        const translation = await getTranslation(language, text);
 
         return Response.json({ message: translation });
       },
@@ -48,7 +48,7 @@ async function getTranslation(lang: string, text: string) {
       ],
     });
 
-    return response;
+    return response.output_text;
   } catch (error) {
     throw new Error(`There was an issue with your request: ${error}`);
   }
